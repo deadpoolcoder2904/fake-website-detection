@@ -1,0 +1,342 @@
+.animation-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+}
+
+.phishing-scene {
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #1a1f35, #2a3149);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Hacker Animation */
+.hacker-container {
+    position: absolute;
+    left: 10%;
+    bottom: 30%;
+    z-index: 2;
+}
+
+.hacker {
+    font-size: 3rem;
+    color: #505a7b;
+    animation: hackerFloat 3s ease-in-out infinite;
+}
+
+.hacker-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(80, 90, 123, 0.2) 0%, transparent 70%);
+    filter: blur(8px);
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Data Stream */
+.data-stream {
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.data-particle {
+    color: #64ffda;
+    font-family: monospace;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateX(0);
+    animation: dataFlow 2s linear infinite;
+}
+
+/* Device Container */
+.device-container {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.device {
+    width: 200px;
+    height: 140px;
+    background: #2d3555;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform-style: preserve-3d;
+    animation: deviceFloat 4s ease-in-out infinite;
+}
+
+.device-screen {
+    background: #1c2237;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Warning Badge */
+.warning-badge {
+    background: rgba(255, 68, 68, 0.2);
+    color: #ff4444;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    animation: pulse 2s infinite;
+}
+
+.warning-badge i {
+    font-size: 1rem;
+}
+
+/* Protection Shield */
+.protection-shield {
+    color: #64ffda;
+    font-size: 2rem;
+    animation: shieldPulse 2s infinite;
+}
+
+/* Protection Radius */
+.protection-radius {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.radius-ring {
+    position: absolute;
+    border: 2px solid #64ffda;
+    border-radius: 50%;
+    animation: radiusExpand 3s ease-out infinite;
+    opacity: 0;
+}
+
+.radius-ring:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.radius-ring:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.radius-ring:nth-child(3) {
+    animation-delay: 2s;
+}
+
+/* Attack Indicators */
+.attack-indicators {
+    position: absolute;
+    right: 40%;
+    top: 30%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.attack-block {
+    color: #ff4444;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: blockAttack 2s ease-out infinite;
+}
+
+/* Protection Message */
+.protection-message {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #64ffda;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    animation: fadeIn 1s ease-out;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+/* Animations */
+@keyframes hackerFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes dataFlow {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+@keyframes deviceFloat {
+    0%, 100% {
+        transform: translateY(-50%) rotate3d(1, 1, 1, 0deg);
+    }
+    50% {
+        transform: translateY(-60%) rotate3d(1, 1, 1, 2deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes shieldPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(100, 255, 218, 0.5));
+    }
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 10px rgba(100, 255, 218, 0.8));
+    }
+}
+
+@keyframes radiusExpand {
+    0% {
+        width: 50px;
+        height: 50px;
+        opacity: 0.8;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+@keyframes blockAttack {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .phishing-scene {
+        height: 250px;
+    }
+
+    .hacker {
+        font-size: 2rem;
+    }
+
+    .device {
+        width: 160px;
+        height: 120px;
+    }
+
+    .data-particle {
+        font-size: 1rem;
+    }
+
+    .warning-badge {
+        font-size: 0.8rem;
+    }
+
+    .protection-shield {
+        font-size: 1.5rem;
+    }
+
+    .attack-block {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hacker-container {
+        left: 5%;
+    }
+
+    .device-container {
+        right: 10%;
+    }
+
+    .data-stream {
+        left: 30%;
+    }
+} 

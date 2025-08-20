@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*navbar */
+.navbar{
+  background-color: black;
+  height: 50px;
+}
+
+.navbar-brand{
+  margin-left: 8%;
+  color: white;
+  margin-right: 30%;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.nav-link{
+  color: white;
+  margin-left: 30px;
+}
+
+.nav-opt{
+  margin-left: 40%;
+}
+
+.nav-link:hover{
+  color: white;
+  font-weight: 700;
+}
+
+.navbar-brand:hover{
+  color: white;
+}
+
+/* Check url */
+.input-url{
+  margin-left: 16rem;
+  width: 54%;
+  height: 3.5rem;
+  border: solid 2px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+
+.input-url::placeholder{
+  font-size: 1.3rem;
+}
+
+.check-btn{
+  height: 3.4rem;
+  margin-left:2rem;
+  border-radius: 5px;
+  font-size: large;
+  background-color: orange;
+  color: white;
+  font-weight: 500;
+  border-color: orange;
+  border: solid 2px;
+}
+
+.check-btn:hover{
+  background-color: orangered;
+}
+
+/* last checked urls */
+.last-checked{
+  margin-left: 16rem;
+  
+}
+.last-url{
+  font-size: 1.5rem;
+}
+
+/* login */
+.login-inp{
+  width: 40%;
+  height: 3.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: #ede9dd;
+  border:solid 2px;
+  border-color: #ede9dd;
+}
+
+.register-inp{
+  width: 20%;
+  height: 3.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: #ede9dd;
+  border:solid 2px;
+  border-color: #ede9dd;
+}

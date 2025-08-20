@@ -1,0 +1,189 @@
+.navbar {
+    background: linear-gradient(to right, #1e2538, #2d3647) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #17a2b8 !important;
+}
+
+.nav-opt {
+    margin-left: auto;
+}
+
+.navbar-nav {
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    /* margin-right: 1rem; */
+}
+
+.nav-link:hover {
+    color: #00ff9d !important;
+}
+
+.nav-link.active {
+    color: #00ff9d !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 2px;
+    background-color: #00ff9d;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+}
+
+.btn-link {
+    border: none;
+    background: none;
+    padding: 0.5rem 1rem !important;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+}
+
+.btn-link:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Special styling for Register button */
+.nav-item:last-child .nav-link {
+    background: linear-gradient(90deg, #00ff9d, #00cc7d);
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem !important;
+    color: #1e2538 !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+}
+
+.nav-item:last-child .nav-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.4);
+    background: linear-gradient(90deg, #00ff9d, #00b36e);
+}
+
+/* Report URL button styling */
+.nav-item button.nav-link.btn.btn-link {
+    background: linear-gradient(145deg, rgba(220, 53, 69, 0.1), rgba(201, 42, 57, 0.1));
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem !important;
+    color: #ff5b5b !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 91, 91, 0.2);
+}
+
+.nav-item button.nav-link.btn.btn-link:hover {
+    background: linear-gradient(145deg, rgba(220, 53, 69, 0.15), rgba(201, 42, 57, 0.15));
+    color: #ff5b5b !important;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(255, 91, 91, 0.15);
+}
+
+.nav-item button.nav-link.btn.btn-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 91, 91, 0.2);
+}
+
+/* Logout button styling - make it different from Report URL */
+.nav-item:last-child button.nav-link.btn.btn-link {
+    background: rgba(255, 255, 255, 0.05);
+    color: #00ff9d !important;
+    border: 1px solid rgba(0, 255, 157, 0.2);
+}
+
+.nav-item:last-child button.nav-link.btn.btn-link:hover {
+    background: rgba(0, 255, 157, 0.1);
+    color: #00ff9d !important;
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.1);
+}
+
+.nav-item:last-child button.nav-link.btn.btn-link:focus {
+    box-shadow: 0 0 0 2px rgba(0, 255, 157, 0.2);
+}
+
+.navbar-toggler {
+    border-color: rgba(0, 255, 157, 0.5) !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 157, 0.25) !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    filter: brightness(0) saturate(100%) invert(91%) sepia(24%) saturate(757%) hue-rotate(84deg) brightness(104%) contrast(104%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar .container-fluid {
+        padding: 0.5rem;
+    }
+
+    .navbar-nav {
+        gap: 0.25rem;
+        padding: 1rem 0;
+    }
+
+    .nav-opt {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .nav-link::after {
+        bottom: -2px;
+    }
+
+    .nav-item:last-child .nav-link {
+        margin-top: 0.5rem;
+    }
+
+    .nav-opt {
+        margin-top: 1rem;
+    }
+    
+    .nav-link.active::after {
+        width: 10%;
+    }
+} 

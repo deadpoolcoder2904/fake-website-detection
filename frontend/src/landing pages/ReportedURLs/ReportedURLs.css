@@ -1,0 +1,186 @@
+/* Full page background */
+html, body {
+    background-color: #2c3444;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.reported-urls-container {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #2c3444;
+}
+
+.reported-urls-container h2 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reported-urls-container p {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.loading, .error, .no-urls {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    background: linear-gradient(145deg, rgba(26, 32, 44, 0.95), rgba(17, 19, 23, 0.95));
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.error {
+    color: #ff5b5b;
+    background: rgba(255, 91, 91, 0.1);
+    border: 1px solid rgba(255, 91, 91, 0.2);
+}
+
+.no-urls {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.table-responsive {
+    background: linear-gradient(145deg, rgba(26, 32, 44, 0.95), rgba(17, 19, 23, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.table {
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+}
+
+.table td {
+    vertical-align: middle;
+    border-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+}
+
+/* Specific styles for URL, Reported By, and Date Reported columns */
+.table td:nth-child(1),  /* URL column */
+.table td:nth-child(3),  /* Reported By column */
+.table td:nth-child(4) { /* Date Reported column */
+    color: #1a1a1a;
+}
+
+/* Keep the status and type badges with their original styling */
+.table td:nth-child(2) .badge,
+.table td:nth-child(5) .badge {
+    color: #ffffff;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.url-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    display: block;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.url-link:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.badge {
+    font-size: 0.85rem;
+    padding: 0.5em 0.8em;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.badge.bg-danger {
+    background: linear-gradient(145deg, #ff5b5b, #dc3545) !important;
+    border: 1px solid rgba(255, 91, 91, 0.2);
+}
+
+.badge.bg-success {
+    background: linear-gradient(145deg, #00ff9d, #00cc7d) !important;
+    border: 1px solid rgba(0, 255, 157, 0.2);
+}
+
+.badge.bg-warning {
+    background: linear-gradient(145deg, #ffd700, #ffa500) !important;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* Loading spinner */
+.spinner-border {
+    color: #00ff9d !important;
+}
+
+/* Try Again button */
+.btn-primary {
+    background: linear-gradient(90deg, #00ff9d, #00cc7d);
+    border: none;
+    color: #1a202c;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .reported-urls-container {
+        padding: 1rem;
+    }
+
+    .reported-urls-container p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .table th, .table td {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+
+    .url-link {
+        max-width: 150px;
+    }
+} 
