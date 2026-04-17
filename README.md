@@ -1,11 +1,1 @@
-fake-website-detection/
-│── data/                 # Dataset files
-│── notebooks/            # Jupyter notebooks (EDA & training)
-│── src/                  # Source code
-│   ├── feature_extraction.py
-│   ├── train_model.py
-│   ├── predict.py
-│── models/               # Saved ML models
-│── app/                  # Web app (if applicable)
-│── requirements.txt
-│── README.md
+This project aims to detect fraudulent or fake websites using machine learning and heuristic-based analysis. The system analyzes various features of a website such as URL structure, domain information, and page content to classify whether a website is legitimate or phishing/fake.
